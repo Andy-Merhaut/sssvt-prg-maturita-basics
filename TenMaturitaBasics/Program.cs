@@ -11,6 +11,14 @@ namespace TenMaturitaBasics
     {
         static void Main(string[] args)
         {
+            Console.Write("Ahoj uživateli, napiš své jméno: ");
+            string uzivatelovoJmeno = Console.ReadLine();
+            Console.WriteLine("Tvé jméno je: " + uzivatelovoJmeno);
+            Console.ReadKey();
+        }
+
+        public void ExtraMethod()
+        {
             char znak = 'a';
             string retezec;
 
@@ -34,8 +42,8 @@ namespace TenMaturitaBasics
 
             /*float cisloSPohyblivouCarkou -> double*/
 
-            desetineCislo = (float) cisloSPohyblivouCarkou;
-            
+            desetineCislo = (float)cisloSPohyblivouCarkou;
+
             /*
              * bod.X = (float) bodXDoubleZDatabase;
              * bod.Y = (float) bodYDoubleZDatabase;
@@ -56,7 +64,7 @@ namespace TenMaturitaBasics
 
             int[] poleCisel;
             List<int> kolekceCisel;
-            
+
             decimal extraDesetineCislo;
         }
     }
