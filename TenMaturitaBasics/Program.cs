@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.SqlServer.Server;
@@ -14,21 +15,31 @@ namespace TenMaturitaBasics
             Console.Write("Ahoj uživateli, napiš své jméno: ");
             string uzivatelovoJmeno = Console.ReadLine();
             Console.WriteLine("Tvé jméno je: " + uzivatelovoJmeno);
-            Console.WriteLine("Tvé jméno je: {0}", uzivatelovoJmeno);
 
-            string jmeno = "Karel";
-            string verzeSystemu = "Windows 10.12.6.8.7";
-            string pocasi = "slunečné";
-            string hodina = "5";
-            string minuta = "47";
+            Console.WriteLine("**********************************");
 
+            int maximalniPocetCisel = 5;
 
-            string messageHello = String.Format("Ahoj uživateli {0}, vítej v systému {1}, dnes je {2} počasí a je {3} hodin a {4} minut",
-                uzivatelovoJmeno, verzeSystemu, pocasi, hodina, minuta);
+            int[] randomCisla = new int[maximalniPocetCisel];
 
-            Console.WriteLine(messageHello);
+            for (int i = 0; i < maximalniPocetCisel; i++)
+            {
+                Console.Write("Napiš nám prosím nějaké random číslo: ");
+                string randomCislo = Console.ReadLine();
+                randomCisla[i] = Convert.ToInt32(randomCislo);
+            }
+
+            foreach (int cislo in randomCisla)
+            {
+                Console.WriteLine(cislo);
+            }
 
             Console.ReadKey();
+        }
+
+        public static int Soucet(int cisloJedna, int cisloDve)
+        {
+            return cisloJedna + cisloDve;
         }
 
         public void ExtraMethod()
