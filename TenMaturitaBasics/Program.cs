@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.SqlServer.Server;
 
 namespace TenMaturitaBasics
 {
@@ -31,6 +32,16 @@ namespace TenMaturitaBasics
             double desetineCislo = 1.2d;
             float cisloSPohyblivouCarkou = 1.2f;
 
+            /*float cisloSPohyblivouCarkou -> double*/
+
+            desetineCislo = (float) cisloSPohyblivouCarkou;
+            
+            /*
+             * bod.X = (float) bodXDoubleZDatabase;
+             * bod.Y = (float) bodYDoubleZDatabase;
+             *
+             */
+
             var dbl = 1.2d;
             var flt = 1.2f;
 
@@ -46,9 +57,7 @@ namespace TenMaturitaBasics
             int[] poleCisel;
             List<int> kolekceCisel;
             
-
             decimal extraDesetineCislo;
-            
         }
     }
 }
