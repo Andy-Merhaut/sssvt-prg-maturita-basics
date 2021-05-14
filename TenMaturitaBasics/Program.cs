@@ -11,20 +11,23 @@ namespace TenMaturitaBasics
     {
         static void Main(string[] args)
         {
-            string jmeno = "Andy";
-            string cestaKSouboru = @"C:\users\text.txt
-a
-a
-a
-                nbbbb
-                        bbbb
-";
+            Console.Write("Ahoj uživateli, napiš své jméno: ");
+            string uzivatelovoJmeno = Console.ReadLine();
+            Console.WriteLine("Tvé jméno je: " + uzivatelovoJmeno);
+            Console.WriteLine("Tvé jméno je: {0}", uzivatelovoJmeno);
 
-            Console.WriteLine(cestaKSouboru);
+            string jmeno = "Karel";
+            string verzeSystemu = "Windows 10.12.6.8.7";
+            string pocasi = "slunečné";
+            string hodina = "5";
+            string minuta = "47";
 
-            //Console.Write("Ahoj uživateli, napiš své jméno: ");
-            //string uzivatelovoJmeno = Console.ReadLine();
-            //Console.WriteLine("Tvé jméno je: " + uzivatelovoJmeno);
+
+            string messageHello = String.Format("Ahoj uživateli {0}, vítej v systému {1}, dnes je {2} počasí a je {3} hodin a {4} minut",
+                uzivatelovoJmeno, verzeSystemu, pocasi, hodina, minuta);
+
+            Console.WriteLine(messageHello);
+
             Console.ReadKey();
         }
 
