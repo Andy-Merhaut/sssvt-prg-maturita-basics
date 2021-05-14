@@ -11,9 +11,20 @@ namespace TenMaturitaBasics
     {
         static void Main(string[] args)
         {
-            Console.Write("Ahoj uživateli, napiš své jméno: ");
-            string uzivatelovoJmeno = Console.ReadLine();
-            Console.WriteLine("Tvé jméno je: " + uzivatelovoJmeno);
+            string jmeno = "Andy";
+            string cestaKSouboru = @"C:\users\text.txt
+a
+a
+a
+                nbbbb
+                        bbbb
+";
+
+            Console.WriteLine(cestaKSouboru);
+
+            //Console.Write("Ahoj uživateli, napiš své jméno: ");
+            //string uzivatelovoJmeno = Console.ReadLine();
+            //Console.WriteLine("Tvé jméno je: " + uzivatelovoJmeno);
             Console.ReadKey();
         }
 
@@ -36,6 +47,7 @@ namespace TenMaturitaBasics
 
             cislo = Convert.ToInt32(konverzniCislo);
             cislo = int.Parse(konverzniCislo);
+            
 
             double desetineCislo = 1.2d;
             float cisloSPohyblivouCarkou = 1.2f;
