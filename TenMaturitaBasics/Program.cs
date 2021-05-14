@@ -34,6 +34,15 @@ namespace TenMaturitaBasics
                 Console.WriteLine(cislo);
             }
 
+            Console.WriteLine("*******************");
+
+            int[] vycistenePole = VycistiPole(randomCisla);
+
+            foreach (int cislo in vycistenePole)
+            {
+                Console.WriteLine(cislo);
+            }
+
             Console.ReadKey();
         }
 
