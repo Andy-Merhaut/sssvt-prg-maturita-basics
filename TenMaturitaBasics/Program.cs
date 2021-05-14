@@ -20,22 +20,41 @@ namespace TenMaturitaBasics
 
             int maximalniPocetCisel = 5;
 
-            int[] randomCisla = new int[maximalniPocetCisel];
+            string[] randomCisla = new string[maximalniPocetCisel];
 
             for (int i = 0; i < maximalniPocetCisel; i++)
             {
                 Console.Write("Napiš nám prosím nějaké random číslo: ");
                 string randomCislo = Console.ReadLine();
-                randomCisla[i] = Convert.ToInt32(randomCislo);
+                randomCisla[i] = randomCislo;
             }
 
-            foreach (int cislo in randomCisla)
+            foreach (string cislo in randomCisla)
             {
                 Console.WriteLine(cislo);
             }
 
             Console.ReadKey();
         }
+
+        public static int[] VycistiPole(string[] vstupniPole)
+        {
+            int number;
+            List<int> procistenaCisla = new List<int>();
+
+            foreach (string objekt in vstupniPole)
+            {
+                if (int.TryParse(objekt, out number))
+                {
+                    /*pro true*/
+                    procistenaCisla.Add(Convert.ToInt32(objekt));
+                }
+                /*pro false*/
+            }
+
+            return procistenaCisla.ToArray();
+        }
+
 
         public static int Soucet(int cisloJedna, int cisloDve)
         {
